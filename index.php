@@ -174,10 +174,11 @@ function getPerfectPartner($surname, $name, $patronomyc, $partners_array) {
     }
     $shortPersonName = getShortName($personFullName);
     $shortPartnerName = getShortName($randomPartner);
-    
+    $percentCompatibility = mt_rand(50, 100) + mt_rand(0, 100)/100;
+
     echo 'Результат функции идеального подбора пары' . "<br>";
     echo $shortPersonName . " + " . $shortPartnerName . " = " . "<br>";
-    echo "♡". " Идеально на ". rand(50, 100). "% " ."♡";
+    echo "♡". " Идеально на ". $percentCompatibility. "% " ."♡";
     return 0;
 }
 $arrParts = getPartsFromFullname($example_persons_array[random_int(0, count($example_persons_array)-1)]['fullname']);
